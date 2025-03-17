@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
-
+import logo from '../assets/logo.jpg'
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -41,7 +41,7 @@ const Login = () => {
   return (
     <div className='main'>
       <div className='login-main'>
-        <img src="./src/assets/logo.jpg" alt="NMSoft" />
+        <img src={logo} alt="NMSoft" />
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
           <input
