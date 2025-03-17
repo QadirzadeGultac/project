@@ -13,7 +13,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://clinic.nmtech.az/nm-clinic-api/api/v0/auth/login", {
+      const response = await fetch("https://clinic.nmtech.az/nm-clinic-api/api/v0/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
