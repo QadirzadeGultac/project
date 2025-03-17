@@ -46,11 +46,11 @@ const Menyu = ({ onResidentsClick, closeResidentsClick, onUsersClick, closeUsers
         {/* Sakinlər */}
         <div className="menu-main" onClick={() => { toggleMenu("residents"); onResidentsClick(); closeUsersClick(); closePriceListClick(); }}>
           <div className="residents-div">
-            <img
+          <img
               className="residents"
               src={activeMenu === "residents"
-                ? {residentsBlue}
-                : {residentsBlack}}
+                ? residentsBlue
+                : residentsBlack}
               alt="residents"
             />
             {!isMenuOpen && (
@@ -67,8 +67,8 @@ const Menyu = ({ onResidentsClick, closeResidentsClick, onUsersClick, closeUsers
             <img
               className="users"
               src={activeMenu === "users"
-                ? {usersBlue}
-                : {usersBlack}}
+                ? usersBlue
+                : usersBlack}
               alt="users"
             />
             {!isMenuOpen && (
@@ -85,8 +85,8 @@ const Menyu = ({ onResidentsClick, closeResidentsClick, onUsersClick, closeUsers
             <img
               className="price-list"
               src={activeMenu === "price-list"
-                ? {priceListBlue}
-                : {priceListBlack}}
+                ? priceListBlue
+                : priceListBlack}
               alt="price-list"
             />
             {!isMenuOpen && (
@@ -103,8 +103,8 @@ const Menyu = ({ onResidentsClick, closeResidentsClick, onUsersClick, closeUsers
             <img
               className="permissions"
               src={activeMenu === "permissions"
-                ? {permissionsBlue}
-                : {permissionsBlack}}
+                ? permissionsBlue
+                : permissionsBlack}
               alt="permissions"
             />
             {!isMenuOpen && (
@@ -121,8 +121,8 @@ const Menyu = ({ onResidentsClick, closeResidentsClick, onUsersClick, closeUsers
             <img
               className="calculations"
               src={activeMenu === "calculations"
-                ? {calculationsBlue}
-                : {calculationsBlack}}
+                ? calculationsBlue
+                : calculationsBlack}
               alt="calculations"
             />
             {!isMenuOpen && (
@@ -139,8 +139,8 @@ const Menyu = ({ onResidentsClick, closeResidentsClick, onUsersClick, closeUsers
             <img
               className="report"
               src={activeMenu === "report"
-                ? {reportBlue}
-                : {reportBlack}}
+                ? reportBlue
+                : reportBlack}
               alt="report"
             />
             {!isMenuOpen && (
