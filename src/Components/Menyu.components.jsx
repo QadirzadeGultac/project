@@ -1,6 +1,20 @@
 import React, { useState } from 'react';
 import './Menyu.css';
 import { useNavigate } from 'react-router-dom';
+import burgerMenu from "../assets/menu.png"
+import residentsBlue from "../assets/residents-blue.png"
+import residentsBlack from "../assets/residents-black.png"
+import usersBlue from "../assets/users-blue.png"
+import usersBlack from "../assets/users-black.png"
+import priceListBlue from "../assets/price-list-blue.png"
+import priceListBlack from "../assets/price-list-black.png"
+import permissionsBlue from "../assets/permissions-blue.png"
+import permissionsBlack from "../assets/permissions-black.png"
+import calculationsBlue from "../assets/calculations-blue.png"
+import calculationsBlack from "../assets/calculations-black.png"
+import reportBlue from "../assets/report-blue.png"
+import reportBlack from "../assets/report-black.png"
+import logout from "../assets/logout.png"
 const Menyu = ({ onResidentsClick, closeResidentsClick, onUsersClick, closeUsersClick }) => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +37,7 @@ const Menyu = ({ onResidentsClick, closeResidentsClick, onUsersClick, closeUsers
         <div className="menu-header">
           <h1>
             <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <img className="burger" src="./src/assets/menu.png" alt="burger menu" />
+              <img className="burger" src={burgerMenu} alt="burger menu" />
             </button>
             {!isMenuOpen && "NM SOFT"}
           </h1>
@@ -35,8 +49,8 @@ const Menyu = ({ onResidentsClick, closeResidentsClick, onUsersClick, closeUsers
             <img
               className="residents"
               src={activeMenu === "residents"
-                ? "./src/assets/residents-blue.png"
-                : "./src/assets/residents-black.png"}
+                ? {residentsBlue}
+                : {residentsBlack}}
               alt="residents"
             />
             {!isMenuOpen && (
@@ -53,8 +67,8 @@ const Menyu = ({ onResidentsClick, closeResidentsClick, onUsersClick, closeUsers
             <img
               className="users"
               src={activeMenu === "users"
-                ? "./src/assets/users-blue.png"
-                : "./src/assets/users-black.png"}
+                ? {usersBlue}
+                : {usersBlack}}
               alt="users"
             />
             {!isMenuOpen && (
@@ -71,8 +85,8 @@ const Menyu = ({ onResidentsClick, closeResidentsClick, onUsersClick, closeUsers
             <img
               className="price-list"
               src={activeMenu === "price-list"
-                ? "./src/assets/price-list-blue.png"
-                : "./src/assets/price-list-black.png"}
+                ? {priceListBlue}
+                : {priceListBlack}}
               alt="price-list"
             />
             {!isMenuOpen && (
@@ -89,8 +103,8 @@ const Menyu = ({ onResidentsClick, closeResidentsClick, onUsersClick, closeUsers
             <img
               className="permissions"
               src={activeMenu === "permissions"
-                ? "./src/assets/permissions-blue.png"
-                : "./src/assets/permissions-black.png"}
+                ? {permissionsBlue}
+                : {permissionsBlack}}
               alt="permissions"
             />
             {!isMenuOpen && (
@@ -107,8 +121,8 @@ const Menyu = ({ onResidentsClick, closeResidentsClick, onUsersClick, closeUsers
             <img
               className="calculations"
               src={activeMenu === "calculations"
-                ? "./src/assets/calculations-blue.png"
-                : "./src/assets/calculations-black.png"}
+                ? {calculationsBlue}
+                : {calculationsBlack}}
               alt="calculations"
             />
             {!isMenuOpen && (
@@ -125,8 +139,8 @@ const Menyu = ({ onResidentsClick, closeResidentsClick, onUsersClick, closeUsers
             <img
               className="report"
               src={activeMenu === "report"
-                ? "./src/assets/report-blue.png"
-                : "./src/assets/report-black.png"}
+                ? {reportBlue}
+                : {reportBlack}}
               alt="report"
             />
             {!isMenuOpen && (
@@ -144,7 +158,7 @@ const Menyu = ({ onResidentsClick, closeResidentsClick, onUsersClick, closeUsers
                 closeResidentsClick();
                 closeUsersClick();
               }} >Log out
-                <img className='log-out-img' src="./src/assets/logout.png" alt="log out" />
+                <img className='log-out-img' src={logout} alt="log out" />
               </button>
             </>
           ) : (
@@ -154,7 +168,7 @@ const Menyu = ({ onResidentsClick, closeResidentsClick, onUsersClick, closeUsers
                 handleLogout();
                 closeResidentsClick();
                 closeUsersClick();
-              }} src="./src/assets/logout.png" alt="log out" />
+              }} src={logout} alt="log out" />
           )}
         </div>
 
